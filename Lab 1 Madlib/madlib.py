@@ -70,3 +70,6 @@ def damage_calc(a, d):
 #inserting paramaters
 defend = damage_calc(r5, r6);
 
+#attack calculation
+attack = r5 * 2
+
