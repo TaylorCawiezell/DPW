@@ -73,3 +73,6 @@ defend = damage_calc(r5, r6);
 #attack calculation
 attack = r5 * 2
 
+#for loop showing how many times X screamed
+for i in range(0,10):
+    i = i+1
