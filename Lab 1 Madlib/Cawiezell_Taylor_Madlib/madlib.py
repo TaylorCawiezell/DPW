@@ -83,7 +83,7 @@ end = {'end':'The End!'}
 
 #displaying story
 story = '''
-This is a story of {r1} proportions about a {r2}. This {r1} story will utterly change the way you feel about {r3}! Once upon a time a {r2} met a evil {r4} that made his {r1} journey begin. The evil {r4} gave the {r2} a {r1} curse. {r1}!! He cried as he took the {r1} sword and drove it in the {r3} of the {r4} and it did {r5} damage then he used a glowing atack that did {super_attack} he defended wich was {defend} damage, the {r2} screamed {i} times and died. After the {r1} battle the {r2} rated the battle a {r7} on a scale of 10. {end[end]}
+This is a story of {r1} proportions about a {r2}. This {r1} story will utterly change the way you feel about {r3}! Once upon a time a {r2} met a evil {r4} that made his {r1} journey begin. The evil {r4} gave the {r2} a {r1} curse. {r1}!! He cried as he took the {r1} sword and drove it in the {r3} of the {r4} and it did {r5} damage then he used a glowing atack that did {super_attack} he defended wich was {defend} damage, the {r4} screamed {i} times and died. After the {r1} battle the {r2} rated the battle a {r7} on a scale of 10. {end[end]}
 '''
 story = story.format(**locals())
 
