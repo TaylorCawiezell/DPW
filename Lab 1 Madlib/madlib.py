@@ -63,3 +63,10 @@ r5 = int(input5)
 r6 = int(input6)
 r7 = int(input7)
 
+#function calculating defence
+def damage_calc(a, d):
+    damage = a - d
+    return damage
+#inserting paramaters
+defend = damage_calc(r5, r6);
+
