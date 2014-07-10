@@ -53,3 +53,8 @@ else:
     pass
 #end of if statements
 
+#Creating a variable that makes statements display correctly
+r1 = ''.join(res1)
+r2 = ''.join(res2)
+r3 = ''.join(res3)
+r4 = ''.join(res4)
