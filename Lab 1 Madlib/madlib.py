@@ -7,3 +7,9 @@ input5 = raw_input('Choose a number ')
 input6 = raw_input('Choose another number ')
 input7 = raw_input('Choose another number ')
 
+#Responce arrays empty to be appended
+res1 = []
+res2 = []
+res3 = []
+res4 = []
+
