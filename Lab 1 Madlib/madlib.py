@@ -13,3 +13,43 @@ res2 = []
 res3 = []
 res4 = []
 
+'''
+If statements that choose what selection to be appended
+'''
+if input1 == '1':
+    res1.append('Awesome')
+elif input1 == '2':
+    res1.append('Aweful')
+elif input1 == '3':
+    res1.append('Awesomeful')
+else:
+    pass
+
+if input2 == '1':
+    res2.append('Hero')
+elif input2 == '2':
+    res2.append('Moderately atractive nice guy')
+elif input2 == '3':
+    res2.append('Banana')
+else:
+    pass
+
+if input3 == '1':
+    res3.append('Life')
+elif input3 == '2':
+    res3.append("Banana's")
+elif input3 == '3':
+    res3.append('Goat')
+else:
+    pass
+
+if input4 == '1':
+    res4.append('Guy')
+elif input4 == '2':
+    res4.append("Akward dental assistant")
+elif input4 == '3':
+    res4.append('Soup')
+else:
+    pass
+#end of if statements
+
