@@ -15,7 +15,9 @@ class MainHandler(webapp2.RequestHandler):
         <title>Welcome!</title>
     </head>
     <body>
-        <h1>Simple Form</h1>
+        <form method='GET'>
+            
+        </form>
     </body>
 </html>'''
         self.response.write(page)
