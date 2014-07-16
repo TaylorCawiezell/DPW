@@ -16,11 +16,13 @@ class MainHandler(webapp2.RequestHandler):
     </head>
     <body>
         <form method='GET'>
-            
+            <label>Name:</label><input type='text' name='user'/>
+            <label>Name:</label><input type='text' name='email' />
+            <input type='submit' value='Submit' />
         </form>
     </body>
 </html>'''
-        self.response.write(page)
+        self.response.write(page) #printing information
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
