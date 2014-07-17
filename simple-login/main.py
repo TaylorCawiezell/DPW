@@ -13,13 +13,23 @@ class MainHandler(webapp2.RequestHandler):
 <html>
     <head>
         <title>Welcome!</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
     </head>
-    <body>'''
+    <body><form method='GET'>'''
         
-        page_body = '''<form method='GET'>
-            <label>Name:</label><input type='text' name='user'/>
-            <label>Name:</label><input type='text' name='email' />
-            <input type='submit' value='Submit' />'''
+        page_body = '''
+            <label>Name</label><input type='text' name='user'/><br>
+            <label>Email</label><input type='email' name='email' /><br>
+            <input type="radio" name="" value="">
+            <input type="radio" name="" value=""><br>
+            <select>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+            </select><br>
+            <input class='button' type='submit' value='Submit' />'''
         
         page_close = '''
         </form>
@@ -28,7 +38,7 @@ class MainHandler(webapp2.RequestHandler):
         if self.request.GET:
             user = self.request.GET['user']
             email = self.request.GET['email']
-            self.response.write(page_head + user + ' | ' + email + page_body + page_close)
+            self.response.write(page_head + user + ' | ' + email + page_close)
         else:
             self.response.write(page_head + page_body + page_close) #printing information
             

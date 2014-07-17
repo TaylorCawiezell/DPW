@@ -1,0 +1,48 @@
+/*
+google fonts
+
+font-family: 'Roboto', sans-serif;
+*/
+
+body{
+	font: 28px 'Roboto', sans-serif;
+}
+form{
+	color: white;
+	background: #3abeef;
+	border-radius: 10px;
+	height: 300px;
+	width:600px;
+	padding:10px;
+	text-align:center;
+	margin: auto;
+}
+
+form input{
+	padding:2px;
+	font: 20px 'Roboto', sans-serif;
+	border: 2px solid white;
+	color:white;
+	border-radius: 5px;
+	background:#3abeef;
+	border: 2px solid white; 
+	height:30px;
+}
+
+select{
+	width: 100px;
+	height: 50px;
+	font: 20px 'Roboto', sans-serif;
+	background:#3abeef;
+	border: 2px solid white;
+	color:white;
+}
+
+input:focus{
+	outline:none;
+}
+
+.button{
+	height:50px;
+	width:200px;
+}
