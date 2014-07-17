@@ -45,7 +45,7 @@ select{
 	border: 2px solid white;
 	color:white;
 	-webkit-transition: all .5s; /* For Safari 3.1 to 6.0 */
-	-o-webkit-transition: all .5s
+	-o-transition: all .5s
     transition: all .5s;
 }
 
@@ -57,7 +57,7 @@ input:focus{
 	height:50px;
 	width:200px;
 	-webkit-transition: all .5s; /* For Safari 3.1 to 6.0 */
-	-o-webkit-transition: all .5s
+	-o-transition: all .5s
     transition: all .5s;
 }
 
@@ -66,4 +66,15 @@ input:focus{
 	color:#3ABEEF;
 }
 
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:#3abeef;
+    border-radius:5px;
+    border:none:
+}
+input[type='checkbox']:checked {
+    background:white;
+}
 

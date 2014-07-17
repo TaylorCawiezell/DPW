@@ -21,7 +21,7 @@ class MainHandler(webapp2.RequestHandler):
         page_body = '''
             <label>Name</label><input class='top-padding' type='text' name='user'/><br>
             <label>Email</label><input type='email' name='email' /><br>
-            <input type="checkbox" name="mlist" value="check">I want Emails 
+            <label class='check-label' for='mlist'>Email Me!</label><input type="checkbox" id='check' name="mlist" value="checkv"><br>
             <select>
                   <option value=""></option>
                   <option value=""></option>
