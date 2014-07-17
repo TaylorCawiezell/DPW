@@ -44,12 +44,13 @@ form input{
     transition: all .5s;
 }
 
+/* used transitions for nice color effect */
 select{
 	width: 100px;
 	height: 50px;
 	font: 20px 'Roboto', sans-serif;
 	background:#3abeef;
-	border: 2px solid white;
+	border: 2px solid white; 
 	color:white;
 	-webkit-transition: all .5s; /* For Safari 3.1 to 6.0 */
 	-o-transition: all .5s
