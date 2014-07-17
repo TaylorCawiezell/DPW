@@ -9,6 +9,7 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        #HTML for header
         page_head = '''<!DOCTYPE HTML>
 <html>
     <head>
@@ -18,7 +19,7 @@ class MainHandler(webapp2.RequestHandler):
         <link rel="stylesheet" type="text/css" href="css/main.css" />
     </head>
     <body><form method='GET'>'''
-        
+        #HTML for form inputs
         page_body = '''
             <h1>Blue Stitch</h1>
             <label>Name</label><input type='text' name='user'/><br>
@@ -32,13 +33,13 @@ class MainHandler(webapp2.RequestHandler):
                   <option value="shoes">Shoes</option>
             </select><br>
             <input class='button' type='submit' value='Pre-Order' />'''
-        
+        #HTML for closing tags
         page_close = '''
         </form>
     </body>
 </html>'''
-        
-        page_com = '''
+        #HTML for order confirmation
+        page_conf = '''
             <h1>Voila!</h1>
             <h2>We will email you when we have the goods!</h2>
             '''
@@ -51,7 +52,7 @@ class MainHandler(webapp2.RequestHandler):
             #selected = bool(self.request.GET.get('select')) can't get sytax to work for select option
             print(selected)
             print(checkbox)
-            self.response.write(page_head + page_com + user + '<br>' + address + '<br>' + email + '<br>Email listing: ' + str(checkbox) + page_close)
+            self.response.write(page_head + page_conf + user + '<br>' + address + '<br>' + email + '<br>Email listing: ' + str(checkbox) + page_close)
         else:
             self.response.write(page_head + page_body + page_close) #printing information
 
