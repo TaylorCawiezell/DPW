@@ -14,7 +14,7 @@ class MainHandler(webapp2.RequestHandler):
     <head>
         <title>Welcome!</title>
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
-        <link href='http://fonts.googleapis.com/css?family=Erica+One' rel='stylesheet' type='text/css'/>
+        <link href='http://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/main.css" />
     </head>
     <body><form method='GET'>'''
