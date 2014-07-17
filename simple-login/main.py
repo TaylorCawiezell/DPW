@@ -43,7 +43,7 @@ class MainHandler(webapp2.RequestHandler):
             <h1>Voila!</h1>
             <h2>We will email you when we have the goods!</h2>
             '''
-        
+        #if else statement to display html needed
         if self.request.GET:
             user = self.request.GET['user']
             email = self.request.GET['email']
