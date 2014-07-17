@@ -14,12 +14,14 @@ class MainHandler(webapp2.RequestHandler):
     <head>
         <title>Welcome!</title>
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Erica+One' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" type="text/css" href="css/main.css" />
     </head>
     <body><form method='GET'>'''
         
         page_body = '''
-            <label>Name</label><input class='top-padding' type='text' name='user'/><br>
+            <h1>Blue Style</h1>
+            <label>Name</label><input type='text' name='user'/><br>
             <label>Email</label><input type='email' name='email' /><br>
             <label class='check-label' for='mlist'>Email Me!</label><input type="checkbox" id='check' name="mlist" value="checkv"><br>
             <select>
