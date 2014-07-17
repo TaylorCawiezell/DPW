@@ -57,6 +57,7 @@ select{
     transition: all .5s;
 }
 
+/* gives me the ability to edit input */
 input:focus{
 	outline:none;
 }
