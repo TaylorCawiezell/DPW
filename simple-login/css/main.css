@@ -11,11 +11,15 @@ form{
 	color: white;
 	background: #3abeef;
 	border-radius: 10px;
-	height: 300px;
-	width:600px;
+	height: 500px;
+	width:500px;
 	padding:10px;
 	text-align:center;
 	margin: auto;
+}
+
+.top-padding{
+	margin-top:130px;
 }
 
 form input{
@@ -27,6 +31,10 @@ form input{
 	background:#3abeef;
 	border: 2px solid white; 
 	height:30px;
+	margin:15px;
+	-webkit-transition: all .5s; /* For Safari 3.1 to 6.0 */
+	-o-webkit-transition: all .5s
+    transition: all .5s;
 }
 
 select{
@@ -36,6 +44,9 @@ select{
 	background:#3abeef;
 	border: 2px solid white;
 	color:white;
+	-webkit-transition: all .5s; /* For Safari 3.1 to 6.0 */
+	-o-webkit-transition: all .5s
+    transition: all .5s;
 }
 
 input:focus{
@@ -45,6 +56,14 @@ input:focus{
 .button{
 	height:50px;
 	width:200px;
-	-webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
-    transition: width 2s;
+	-webkit-transition: all .5s; /* For Safari 3.1 to 6.0 */
+	-o-webkit-transition: all .5s
+    transition: all .5s;
 }
+
+.button:hover,input:hover,input:focus,select:hover,radio:hover{
+	background:#ffffff;
+	color:#3ABEEF;
+}
+
+

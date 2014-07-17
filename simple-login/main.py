@@ -19,10 +19,9 @@ class MainHandler(webapp2.RequestHandler):
     <body><form method='GET'>'''
         
         page_body = '''
-            <label>Name</label><input type='text' name='user'/><br>
+            <label>Name</label><input class='top-padding' type='text' name='user'/><br>
             <label>Email</label><input type='email' name='email' /><br>
-            <input type="radio" name="" value="">
-            <input type="radio" name="" value=""><br>
+            <input type="checkbox" name="mlist" value="check">I want Emails 
             <select>
                   <option value=""></option>
                   <option value=""></option>
