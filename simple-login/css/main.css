@@ -10,13 +10,18 @@ body{
 }
 
 h1{
-    font: 50px 'Erica One', cursive;
+    font: 60px 'Codystar', cursive;
 }
+
+h2{
+    font: 20px 'Codystar', cursive;
+}
+
 form{
 	color: white;
 	background: #3abeef;
 	border-radius: 10px;
-	height: 500px;
+	height: 600px;
 	width:500px;
 	padding:10px;
 	text-align:center;

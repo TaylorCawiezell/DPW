@@ -20,29 +20,40 @@ class MainHandler(webapp2.RequestHandler):
     <body><form method='GET'>'''
         
         page_body = '''
-            <h1>Blue Style</h1>
+            <h1>Blue Stitch</h1>
             <label>Name</label><input type='text' name='user'/><br>
+            <label>Address</label><input type='text' name='address'/><br>
             <label>Email</label><input type='email' name='email' /><br>
-            <label class='check-label' for='mlist'>Email Me!</label><input type="checkbox" id='check' name="mlist" value="checkv"><br>
-            <select>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
-                  <option value=""></option>
+            <label class='check-label' for='mlist'>Subscribe</label><input type="checkbox" name="mlist" value="yes"><br>
+            <label>I need... </label><select name='select'>
+                  <option value="pants">Pants</option>
+                  <option value="jacket">Jacket</option>
+                  <option value="shirt">Shirt</option>
+                  <option value="shoes">Shoes</option>
             </select><br>
-            <input class='button' type='submit' value='Submit' />'''
+            <input class='button' type='submit' value='Pre-Order' />'''
         
         page_close = '''
         </form>
     </body>
 </html>'''
+        
+        page_com = '''
+            <h1>Voila!</h1>
+            <h2>We will email you when we have the goods!</h2>
+            '''
+        
         if self.request.GET:
             user = self.request.GET['user']
             email = self.request.GET['email']
-            self.response.write(page_head + user + ' | ' + email + page_close)
+            address = self.request.GET['address']
+            checkbox = bool(self.request.GET.get('mlist'))
+            selected = bool(self.request.GET.get('select'))
+            print(selected)
+            print(checkbox)
+            self.response.write(page_head + page_com + user + '<br>' + address + '<br>' + email + '<br>Email listing: ' + str(checkbox) + page_close)
         else:
             self.response.write(page_head + page_body + page_close) #printing information
-            
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
