@@ -48,7 +48,7 @@ class MainHandler(webapp2.RequestHandler):
             email = self.request.GET['email']
             address = self.request.GET['address']
             checkbox = bool(self.request.GET.get('mlist'))
-            selected = bool(self.request.GET.get('select'))
+            #selected = bool(self.request.GET.get('select')) can't get sytax to work for select option
             print(selected)
             print(checkbox)
             self.response.write(page_head + page_com + user + '<br>' + address + '<br>' + email + '<br>Email listing: ' + str(checkbox) + page_close)
