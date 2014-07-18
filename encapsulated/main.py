@@ -60,16 +60,16 @@ class MainHandler(webapp2.RequestHandler):
         sarah.anual= 96000
         sarah.time = 10 #time in years
         sarah.calc_total()
-        #self.response.write(str(tom.total_earnings))
+        #self.response.write(str(sarah.total_earnings))
         
         #Jake's Earnings
-        tom = Earnings()
-        tom.hourly = 50.50
-        tom.monthly = 8000
-        tom.anual= 96000
-        tom.time = 10 #time in years
-        tom.calc_total()
-        #self.response.write(str(tom.total_earnings))
+        jake = Earnings()
+        jake.hourly = 50.50
+        jake.monthly = 8000
+        jake.anual= 96000
+        jake.time = 10 #time in years
+        jake.calc_total()
+        #self.response.write(str(jake.total_earnings))
 
 class Earnings(object):
     def __init__(self):
