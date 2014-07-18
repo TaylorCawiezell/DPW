@@ -2,64 +2,106 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-         page_head = '''<!DOCTYPE HTML>
+        #HTML for header
+        page_head = '''<!DOCTYPE HTML>
 <html>
     <head>
-        <title>Welcome!</title>
+        <title>Calculator!</title>
         <link rel="stylesheet" type="text/css" href="css/main.css" />
     </head>
-    <body><form method='GET'>'''
+    <body>'''
         #HTML for form inputs
         page_body = '''
-            
+            <h1>Employee Earnings</h1>
+            <button>Bob Jones</button>
+            <button>Tom Frank</button>
+            <button>James Fail</button>
+            <button>Sarah Lewis</button>
+            <button>Jake Wilders</button>
             '''
         #HTML for closing tags
         page_close = '''
+        </form>
     </body>
 </html>'''
-        
-        
-        
-        
-        #tommy's grade
-        t = Transcript()
-        t.grade1 = 90
-        t.grade2 = 100
-        t.quiz1 = 75
-        t.quiz2 = 99
-        t.final_grade = 99
-        self.response.write("Tommy's Final Grade Is: " + str(t.final_grade))
-        
-        #sally's grade
-        s = Transcript()
-        s.grade1 = 45
-        s.grade2 = 80
-        s.quiz1 = 66
-        s.quiz2 = 76
-        s.calc_grade()
-        self.response.write("<br />Sally's Final Grade Is: " + str(s.final_grade))
-        
+        self.response.write(page_head + page_body + page_close) #printing information
 
-class Transcript(object):
+        #Bob's Earnings
+        bob = Earnings()
+        bob.hourly = 10.50
+        bob.monthly = 1600
+        bob.anual= 19200
+        bob.time = 2 #time in years
+        bob.calc_total()
+        #self.response.write(str(bob.total_earnings))
+        
+        #Tom's Earnings
+        tom = Earnings()
+        tom.hourly = 50.50
+        tom.monthly = 8000
+        tom.anual= 96000
+        tom.time = 10 #time in years
+        tom.calc_total()
+        #self.response.write(str(tom.total_earnings))
+        
+        #Jame's Earnings
+        james = Earnings()
+        james.hourly = 50.50
+        james.monthly = 8000
+        james.anual= 96000
+        james.time = 10 #time in years
+        james.calc_total()
+        #self.response.write(str(james.total_earnings))
+        
+        #Sarah's Earnings
+        sarah = Earnings()
+        sarah.hourly = 50.50
+        sarah.monthly = 8000
+        sarah.anual= 96000
+        sarah.time = 10 #time in years
+        sarah.calc_total()
+        #self.response.write(str(tom.total_earnings))
+        
+        #Jake's Earnings
+        tom = Earnings()
+        tom.hourly = 50.50
+        tom.monthly = 8000
+        tom.anual= 96000
+        tom.time = 10 #time in years
+        tom.calc_total()
+        #self.response.write(str(tom.total_earnings))
+
+class Earnings(object):
     def __init__(self):
-        self.grade1 = 0
-        self.grade2 = 0
-        self.quiz1 = 0
-        self.quiz2 = 0
-        self.final_exam = 0 #public
-        self.__final_grade = 0 #private
+        self.__hourly = 0
+        self.monthly = 0
+        self.anual= 0
+        self.time = 0
+        self.__total_earnings = 0
         
     @property
-    def final_grade(self):
-        #calculate final grade
-        return self.__final_grade
+    def total_earnings(self):
+        #calculate total earnings
+        return self.__total_earnings
     
-    @final_grade.setter
-    def final_grade(self, new_final_grade):
-        self.__final_grade = new_final_grade
+    @total_earnings.setter
+    def total_earnings(self, new_total_earnings):
+        self.__total_earnings = new_total_earnings
     
-    def calc_grade(self):
-      self.__final_grade = (self.grade1 + self.grade2 + self.quiz1 + self.quiz2 + self.final_exam)/5
+    @property
+    def hourly(self):
+        #calculate total earnings
+        return self.__hourly
+    
+    @hourly.setter
+    def hourly(self, new_hourly):
+        self.__hourly = new_hourly
+            
+    def calc_total(self):
+      self.__total_earnings = self.anual * self.time
+
+
+
 
 
 app = webapp2.WSGIApplication([
