@@ -8,16 +8,19 @@ class MainHandler(webapp2.RequestHandler):
     <head>
         <title>Calculator!</title>
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css' />
     </head>
     <body>'''
         #HTML for form inputs
         page_body = '''
+            <div class='area'>
             <h1>Employee Earnings</h1>
-            <button>Bob Jones</button>
+            <button id="bobbut">Bob Jones</button>
             <button>Tom Frank</button>
             <button>James Fail</button>
             <button>Sarah Lewis</button>
             <button>Jake Wilders</button>
+            </div>
             '''
         #HTML for closing tags
         page_close = '''
@@ -99,6 +102,8 @@ class Earnings(object):
             
     def calc_total(self):
       self.__total_earnings = self.anual * self.time
+      
+    
 
 
 
