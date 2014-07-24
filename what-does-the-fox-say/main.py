@@ -34,7 +34,7 @@ class Animal(object):
         self._family = ''
         self._genus = ''
         self._url = ''
-        self._lifespan = '' + ' years'
+        self._lifespan = ''
         self._habitat = ''
         self._geolocation = ''
     #sound method, will be polymorphed
@@ -45,15 +45,15 @@ class Animal(object):
 class Dog(Animal):
     def __init__(self):
        super(Animal, self).__init__() #Making animal the Super class of Dog
-       self._phylum = 'Phylum: yo <br>'
-       self._class = 'Class: animal <br>'
-       self._order = 'Order: order <br>'
-       self._family = 'Family: dog <br>'
-       self._genus = 'Genus: hello <br>'
+       self._phylum = 'Phylum: Chordata <br>'
+       self._class = 'Class: Mammalia <br>'
+       self._order = 'Order: Carnivora <br>'
+       self._family = 'Family: Canidae <br>'
+       self._genus = 'Genus: Canis <br>'
        self._url = 'Picture: <a href= "www.pic.com">Link to Picture</a> <br>'
        self._lifespan = 'Life Expectancy: 16 years <br>'
-       self._habitat = 'Habitat: grass <br>'
-       self._geolocation = 'Geolocation: everywhere <br>'
+       self._habitat = 'Habitat: Wide Variety <br>'
+       self._geolocation = 'Geolocation: Found All Over The World <br>'
 
     def sound(self): #polymorphed sound method
         self._sound = 'Sound: Bark'
