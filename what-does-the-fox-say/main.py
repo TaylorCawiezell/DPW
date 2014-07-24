@@ -3,20 +3,11 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        a = Animal()
-        d = Dog()
-        c = Cat()
-        f = Fox()
-        self.response.write(c.p)
-        self.response.write('Hellow World')
-        self.response.write(d.p())
-        self.response.write(d.sound())
-        self.response.write(c.sound())
-        self.response.write(f.p())
-        animals = [[Dog()],[Cat()],[Fox()]] #array to store animals
-        self.response.write(Page().p())
+        self.response.write(Page().p()) #printing out HTML Page class
 class Page(object):
     def __init__(self):
+        self.d = Dog()
+        self.animals = [self.d.p(),Cat(),Fox()] #array to store animals
         self._header = '''
 <!DOCTYPE HTML>
 <html>
@@ -25,12 +16,13 @@ class Page(object):
     </head>
     <body>'''
         
-        self._body = ''
-        self._close = '''
+        self._body = '<h1>'
+        self._close = '''</h1>
     </body>
 </html>'''
+        
     def p(self):
-        return self._header + self._body + self._close
+        return self._header + self._body + self.animals[0] + self._close
  #Animal Class (base class for all animals)       
 class Animal(object):
     def __init__(self):
