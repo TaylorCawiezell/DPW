@@ -13,6 +13,7 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(d.sound())
         self.response.write(c.sound())
         self.response.write(f.p())
+        animals = [[Dog()],[Cat()],[Fox()]]
 
 class Page(object):
     def __init__(self):
@@ -24,7 +25,7 @@ class Page(object):
     </head>
     <body>'''
         
-        self._body = 'Filler'
+        self._body = ''
         self._close = '''
     </body>
 </html>'''
