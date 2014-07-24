@@ -1,3 +1,4 @@
+/* editing text for body tag */
 body{
 	color:white;
 	margin: 0, auto;
@@ -5,6 +6,7 @@ body{
 	font-family: 'Raleway', sans-serif;
 }
 
+/* making header tag more unique */
 .header{
 	color:#5EE8BF;
 	font-family: 'Shadows Into Light', cursive;
@@ -12,11 +14,13 @@ body{
 	-webkit-text-stroke: .1px white;
 }
 
-.blue{
+/* making the animal select hearer bigger */
+.animal-head{
 	color:white;
 	font-size: 60px;
 }
 
+/* aligning and creating window for center of page */
 header{
 	background: #36B2E8;
 	width:900px;
@@ -26,6 +30,7 @@ header{
 	padding:10px;
 }
 
+/* customizing button tag with transition */
 button{
 	margin-left:20px;
 	margin-right:20px;
@@ -43,12 +48,14 @@ button{
 	transition: all .5s;
 }
 
+/* adding scale and border transition to button tag */
 button:hover{
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
 	border: 5px solid white;
 }
 
+/* manupulating a tag to look how I want */
 a,a:active,a:link, a:visited{
 	color:white
 }

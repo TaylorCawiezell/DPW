@@ -1,9 +1,15 @@
+'''
+Taylor Cawiezell
 
+07/24/14
+
+What Does The Fox Say?
+'''
 import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        # if Statement to select wich print out happens
+        # if Statement to select wich print out happens based off url
         if self.request.url == 'http://localhost:17080/?dog=':
             self.response.write(Page().dp())
         elif self.request.url == 'http://localhost:17080/?cat=':
@@ -36,7 +42,7 @@ class Page(object):
         
         self._header = '''<header>
         <h1 class='header'>Know Your Animals</h1>
-        <h1 class='blue'> '''
+        <h1 class='animal-head'> '''
         
         self._body = '''</h1>
         <h1>
@@ -52,16 +58,16 @@ class Page(object):
     </body>
 </html>'''
     
-    def dp(self): #method for writing out HTML information
+    def dp(self): #method for writing out Dog HTML information
             return self._title + self._header + self.header_array[1] + self._body + self.animals[0] + self._close
     
-    def cp(self): #method for writing out HTML information
+    def cp(self): #method for writing Cat out HTML information
             return self._title + self._header + self.header_array[2] + self._body + self.animals[1] + self._close
     
-    def fp(self): #method for writing out HTML information
+    def fp(self): #method for writing Fox out HTML information
             return self._title + self._header + self.header_array[3] + self._body + self.animals[2] + self._close
     
-    def p(self): #method for writing out HTML information
+    def p(self): #method for writing out HTML information if nothing is selected
             return self._title + self._header + self.header_array[0] + self._body + self._close
  
  #Animal Class (base class for all animals)       
