@@ -47,6 +47,7 @@ class Dog(Animal):
        super(Animal, self).__init__() #Making animal the Super class of Dog
        self._phylum = 'Phylum: yo <br>'
        self._class = 'Class: animal <br>'
+       self._order = 'Order: order <br>'
        self._family = 'Family: dog <br>'
        self._genus = 'Genus: hello <br>'
        self._url = 'Picture: <a href= "www.pic.com">Link to Picture</a> <br>'
@@ -59,13 +60,14 @@ class Dog(Animal):
         return self._sound
     
     def p(self): #returning strings inside the Dog class
-        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Dog().sound()
+        return self._phylum + self._class + self._order + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Dog().sound()
     
 class Cat(Animal):
     def __init__(self):
        super(Animal, self).__init__()
        self._phylum = 'Phylum: yo <br>'
        self._class = 'Class: animal <br>'
+       self._order = 'Order: order <br>'
        self._family = 'Family: dog <br>'
        self._genus = 'Genus: hello <br>'
        self._url = 'Picture: <a href= "www.pic.com">Link to Picture</a> <br>'
@@ -78,13 +80,14 @@ class Cat(Animal):
         return self._sound
     
     def p(self):
-        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Cat().sound()
+        return self._phylum + self._class + self._order + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Cat().sound()
 
 class Fox(Animal):
     def __init__(self):
        super(Animal, self).__init__()
        self._phylum = 'Phylum: yo <br>'
        self._class = 'Class: animal <br>'
+       self._order = 'Order: order <br>'
        self._family = 'Family: dog <br>'
        self._genus = 'Genus: hello <br>'
        self._url = 'Picture: <a href= "www.pic.com">Link to Picture</a> <br>'
@@ -93,11 +96,11 @@ class Fox(Animal):
        self._geolocation = 'Geolocation: everywhere <br>'
        
     def sound(self):
-        self._sound = 'POW POW POW POW POW POW POW'
+        self._sound = 'Sound: POW POW POW POW POW POW POW'
         return self._sound
     
     def p(self):
-        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Fox().sound()
+        return self._phylum + self._class + self._order + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Fox().sound()
     
 
 app = webapp2.WSGIApplication([
