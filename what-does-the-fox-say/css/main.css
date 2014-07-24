@@ -1,95 +1,16 @@
-/*
-google fonts
-
-font-family: 'Roboto', sans-serif;
-font-family: 'Codystar', cursive;
-*/
-
-/* Setting fonts for main page */
 body{
-	font: 28px 'Roboto', sans-serif;
+	margin: 0, auto;
+	text-align: center;
 }
 
-h1{
-    font: 60px 'Codystar', cursive;
+.header{
+	font-size: 70px;
 }
 
-h2{
-    font: 20px 'Codystar', cursive;
-}
-
-form{
-	color: white;
-	background: #3abeef;
-	border-radius: 10px;
-	height: 600px;
+header{
+	background: #0DFFBD;
 	width:500px;
-	padding:10px;
-	text-align:center;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
 }
-
-form input{
-	padding:2px;
-	font: 20px 'Roboto', sans-serif;
-	border: 2px solid white;
-	color:white;
-	border-radius: 5px;
-	background:#3abeef;
-	border: 2px solid white; 
-	height:30px;
-	margin:15px;
-	-webkit-transition: all .5s; /* For Safari 3.1 to 6.0 */
-	-o-webkit-transition: all .5s
-    transition: all .5s;
-}
-
-/* used transitions for nice color effect */
-select{
-	width: 100px;
-	height: 50px;
-	font: 20px 'Roboto', sans-serif;
-	background:#3abeef;
-	border: 2px solid white; 
-	color:white;
-	-webkit-transition: all .5s; /* For Safari 3.1 to 6.0 */
-	-o-transition: all .5s
-    transition: all .5s;
-}
-
-/* gives me the ability to edit input */
-input:focus{
-	outline:none;
-}
-
-.button{
-	height:50px;
-	width:200px;
-	-webkit-transition: all .5s; /* For Safari 3.1 to 6.0 */
-	-o-transition: all .5s
-    transition: all .5s;
-}
-
-.button:hover,input:hover,input:focus,select:hover,radio:hover{
-	background:#ffffff;
-	color:#3ABEEF;
-}
-
-input[type='checkbox'] {
-    -webkit-appearance:none;
-    width:30px;
-    height:30px;
-    background:#3abeef;
-    border-radius:5px;
-    border:none:
-}
-input[type='checkbox']:checked {
-    background:white;
-}
-
-.check-label{
-    position: relative;
-    bottom:20px;
-    
-}
-

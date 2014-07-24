@@ -3,7 +3,16 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write(Page().p()) #printing out HTML Page class
+        if self.request.url == 'http://localhost:17080/?dog=':
+            self.response.write(Page().dp())
+        elif self.request.url == 'http://localhost:17080/?cat=':
+            self.response.write(Page().cp())
+        elif self.request.url == 'http://localhost:17080/?fox=':
+            self.response.write(Page().fp())
+        else:
+             self.response.write(Page().p())
+            
+
 class Page(object):
     def __init__(self):
         #writing variables for shorthand in strings
@@ -23,14 +32,31 @@ class Page(object):
     <body>'''
         
         self._body = '''
-        <h1 class='header'>Know Your Animals</h1><h1>''' 
+        <header>
+        <h1 class='header'>Know Your Animals</h1>
+        <form style="display: inline" method="get">
+            <button name='dog'>Dog</button>
+            <button name='cat'>Cat</button>
+            <button name='fox'>Fox</button>
+        </form>
+        <h1>''' 
         
         self._close = '''</h1>
+        </header>
     </body>
 </html>'''
-        
+    
+    def dp(self): #method for writing out HTML information
+            return self._header + self._body + self.animals[0] + self._close
+    
+    def cp(self): #method for writing out HTML information
+            return self._header + self._body + self.animals[1] + self._close
+    
+    def fp(self): #method for writing out HTML information
+            return self._header + self._body + self.animals[2] + self._close
+    
     def p(self): #method for writing out HTML information
-        return self._header + self._body + self.animals[0] + self._close
+            return self._header + self._body + self._close
  #Animal Class (base class for all animals)       
 class Animal(object):
     def __init__(self):
