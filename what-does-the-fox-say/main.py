@@ -3,6 +3,7 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        # if Statement to select wich print out happens
         if self.request.url == 'http://localhost:17080/?dog=':
             self.response.write(Page().dp())
         elif self.request.url == 'http://localhost:17080/?cat=':
@@ -20,26 +21,31 @@ class Page(object):
         self.c = Cat()
         self.f = Fox()
         self.animals = [self.d.p(),self.c.p(),self.f.p()] #array to store animals
+        self.header_array = ['Select Your Animal <br>', 'The Dog <br>', 'The Cat <br>', 'The Fox <br>']
         
         #variables for HTML
-        self._header = '''
+        self._title = '''
 <!DOCTYPE HTML>
 <html>
     <head>
         <title>What does the Fox Say?</title>
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light|Raleway' rel='stylesheet' type='text/css' />
     </head>
     <body>'''
         
-        self._body = '''
-        <header>
+        self._header = '''<header>
         <h1 class='header'>Know Your Animals</h1>
+        <h1 class='blue'> '''
+        
+        self._body = '''</h1>
+        <h1>
         <form style="display: inline" method="get">
             <button name='dog'>Dog</button>
             <button name='cat'>Cat</button>
             <button name='fox'>Fox</button>
-        </form>
-        <h1>''' 
+        </form><br>
+        ''' 
         
         self._close = '''</h1>
         </header>
@@ -47,16 +53,17 @@ class Page(object):
 </html>'''
     
     def dp(self): #method for writing out HTML information
-            return self._header + self._body + self.animals[0] + self._close
+            return self._title + self._header + self.header_array[1] + self._body + self.animals[0] + self._close
     
     def cp(self): #method for writing out HTML information
-            return self._header + self._body + self.animals[1] + self._close
+            return self._title + self._header + self.header_array[2] + self._body + self.animals[1] + self._close
     
     def fp(self): #method for writing out HTML information
-            return self._header + self._body + self.animals[2] + self._close
+            return self._title + self._header + self.header_array[3] + self._body + self.animals[2] + self._close
     
     def p(self): #method for writing out HTML information
-            return self._header + self._body + self._close
+            return self._title + self._header + self.header_array[0] + self._body + self._close
+ 
  #Animal Class (base class for all animals)       
 class Animal(object):
     def __init__(self):
