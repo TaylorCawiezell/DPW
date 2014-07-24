@@ -36,7 +36,9 @@ class Dog(Animal):
         self._sound = 'Bark'
         return self._sound
     
-   
+    def p(self): #returning strings inside the Dog class
+        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation
+    
 
 
 app = webapp2.WSGIApplication([
