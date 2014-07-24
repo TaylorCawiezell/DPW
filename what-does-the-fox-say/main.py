@@ -19,7 +19,7 @@ class Page(object):
     </head>
     <body>'''
         
-        self._body = '''<h1> '''
+        self._body = '''<h1>Know Your Animals</h1><h1> '''
         self._close = '''</h1>
     </body>
 </html>'''
@@ -85,15 +85,15 @@ class Cat(Animal):
 class Fox(Animal):
     def __init__(self):
        super(Animal, self).__init__()
-       self._phylum = 'Phylum: yo <br>'
-       self._class = 'Class: animal <br>'
-       self._order = 'Order: order <br>'
-       self._family = 'Family: dog <br>'
-       self._genus = 'Genus: hello <br>'
-       self._url = 'Picture: <a href= "www.pic.com">Link to Picture</a> <br>'
-       self._lifespan = 'Life Expectancy: 16 years <br>'
-       self._habitat = 'Habitat: grass <br>'
-       self._geolocation = 'Geolocation: everywhere <br>'
+       self._phylum = 'Phylum: Chordata <br>'
+       self._class = 'Class: Mammalia <br>'
+       self._order = 'Order: Carnivora <br>'
+       self._family = 'Family: Canidae <br>'
+       self._genus = 'Genus: Vulpes <br>'
+       self._url = 'Picture: <a href= "http://pgcpsmess.files.wordpress.com/2014/04/red_fox.jpg">Link to Picture</a> <br>'
+       self._lifespan = 'Life Expectancy: 5 years <br>'
+       self._habitat = 'Habitat: Forest, Grasslands, Mountains, Deserts <br>'
+       self._geolocation = 'Geolocation: Found All Over The World <br>'
        
     def sound(self):
         self._sound = 'Sound: POW POW POW POW POW POW POW'
