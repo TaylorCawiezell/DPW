@@ -6,8 +6,11 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(Page().p()) #printing out HTML Page class
 class Page(object):
     def __init__(self):
+        #writing variables for shorthand in strings
         self.d = Dog()
-        self.animals = [self.d.p(),Cat(),Fox()] #array to store animals
+        self.c = Cat()
+        self.f = Fox()
+        self.animals = [self.d.p(),self.c.p(),self.f.p()] #array to store animals
         self._header = '''
 <!DOCTYPE HTML>
 <html>
@@ -16,7 +19,7 @@ class Page(object):
     </head>
     <body>'''
         
-        self._body = '<h1>'
+        self._body = '''<h1> '''
         self._close = '''</h1>
     </body>
 </html>'''
@@ -52,11 +55,11 @@ class Dog(Animal):
        self._geolocation = 'everywhere'
 
     def sound(self): #polymorphed sound method
-        self._sound = 'Bark'
+        self._sound = ' Bark'
         return self._sound
     
     def p(self): #returning strings inside the Dog class
-        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation
+        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Dog().sound()
     
 class Cat(Animal):
     def __init__(self):
@@ -75,7 +78,7 @@ class Cat(Animal):
         return self._sound
     
     def p(self):
-        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation
+        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Cat().sound()
 
 class Fox(Animal):
     def __init__(self):
@@ -94,7 +97,7 @@ class Fox(Animal):
         return self._sound
     
     def p(self):
-        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation
+        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Fox().sound()
     
 
 app = webapp2.WSGIApplication([
