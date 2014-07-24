@@ -3,7 +3,16 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-      
+        a = Animal()
+        d = Dog()
+        c = Cat()
+        f = Fox()
+        self.response.write(c.p)
+        self.response.write('Hellow World')
+        self.response.write(d.p())
+        self.response.write(d.sound())
+        self.response.write(c.sound())
+        self.response.write(f.p())
  #Animal Class (base class for all animals)       
 class Animal(object):
     def __init__(self):
