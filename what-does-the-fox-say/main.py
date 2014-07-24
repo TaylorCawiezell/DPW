@@ -11,20 +11,25 @@ class Page(object):
         self.c = Cat()
         self.f = Fox()
         self.animals = [self.d.p(),self.c.p(),self.f.p()] #array to store animals
+        
+        #variables for HTML
         self._header = '''
 <!DOCTYPE HTML>
 <html>
     <head>
         <title>What does the Fox Say?</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body>'''
         
-        self._body = '''<h1>Know Your Animals</h1><h1> '''
+        self._body = '''
+        <h1 class='header'>Know Your Animals</h1><h1>''' 
+        
         self._close = '''</h1>
     </body>
 </html>'''
         
-    def p(self):
+    def p(self): #method for writing out HTML information
         return self._header + self._body + self.animals[0] + self._close
  #Animal Class (base class for all animals)       
 class Animal(object):
@@ -59,12 +64,12 @@ class Dog(Animal):
         self._sound = 'Sound: Bark'
         return self._sound
     
-    def p(self): #returning strings inside the Dog class
+    def p(self): #method for returning variables in Dog class
         return self._phylum + self._class + self._order + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Dog().sound()
     
 class Cat(Animal):
     def __init__(self):
-       super(Animal, self).__init__()
+       super(Animal, self).__init__() #animal is the super clas for Cat
        self._phylum = 'Phylum: Chordata <br>'
        self._class = 'Class: Mammalia <br>'
        self._order = 'Order: Carnivora <br>'
@@ -75,11 +80,11 @@ class Cat(Animal):
        self._habitat = 'Habitat: Wide Variety <br>'
        self._geolocation = 'Geolocation: Found All Over The World <br>'
        
-    def sound(self):
+    def sound(self): #Cat Sound Method
         self._sound = 'Sound: Meow'
         return self._sound
     
-    def p(self):
+    def p(self): #method for returning variables in Cat class
         return self._phylum + self._class + self._order + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Cat().sound()
 
 class Fox(Animal):
@@ -95,11 +100,11 @@ class Fox(Animal):
        self._habitat = 'Habitat: Forest, Grasslands, Mountains, Deserts <br>'
        self._geolocation = 'Geolocation: Found All Over The World <br>'
        
-    def sound(self):
+    def sound(self): #Fox sound Method
         self._sound = 'Sound: POW POW POW POW POW POW POW'
         return self._sound
     
-    def p(self):
+    def p(self): #method for returning variables in Fox class
         return self._phylum + self._class + self._order + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation + Fox().sound()
     
 
