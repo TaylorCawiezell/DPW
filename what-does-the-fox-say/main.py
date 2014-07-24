@@ -13,6 +13,21 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(d.sound())
         self.response.write(c.sound())
         self.response.write(f.p())
+
+class Page(object):
+    def __init__(self):
+        self._header = '''
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>What does the Fox Say?</title>
+    </head>
+    <body>'''
+        
+        self._body = 'Filler'
+        self._close = '''
+    </body>
+</html>'''
  #Animal Class (base class for all animals)       
 class Animal(object):
     def __init__(self):
