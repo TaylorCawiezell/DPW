@@ -3,7 +3,7 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-       
+      
  #Animal Class (base class for all animals)       
 class Animal(object):
     def __init__(self):
@@ -39,7 +39,44 @@ class Dog(Animal):
     def p(self): #returning strings inside the Dog class
         return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation
     
+class Cat(Animal):
+    def __init__(self):
+       super(Animal, self).__init__()
+       self._phylum = 'yo'
+       self._class = 'animal'
+       self._family = 'cat'
+       self._genus = 'hello'
+       self._url = 'www.pic.com'
+       self._lifespan = '16' + ' years'
+       self._habitat = 'grass'
+       self._geolocation = 'everywhere'
+       
+    def sound(self):
+        self._sound = 'Meow'
+        return self._sound
+    
+    def p(self):
+        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation
 
+class Fox(Animal):
+    def __init__(self):
+       super(Animal, self).__init__()
+       self._phylum = 'yo'
+       self._class = 'animal'
+       self._family = 'cat'
+       self._genus = 'hello'
+       self._url = 'www.pic.com'
+       self._lifespan = '16' + ' years'
+       self._habitat = 'grass'
+       self._geolocation = 'everywhere'
+       
+    def sound(self):
+        self._sound = 'POW POW POW POW POW POW POW'
+        return self._sound
+    
+    def p(self):
+        return self._phylum + self._class + self._family + self._genus + self._url + self._lifespan + self._habitat + self._geolocation
+    
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
