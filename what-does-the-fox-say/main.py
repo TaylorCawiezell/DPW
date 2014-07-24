@@ -50,8 +50,8 @@ class Dog(Animal):
        self._order = 'Order: Carnivora <br>'
        self._family = 'Family: Canidae <br>'
        self._genus = 'Genus: Canis <br>'
-       self._url = 'Picture: <a href= "www.pic.com">Link to Picture</a> <br>'
-       self._lifespan = 'Life Expectancy: 16 years <br>'
+       self._url = 'Picture: <a href= "http://1.bp.blogspot.com/-4O1cWMzu40c/Ub3NUu0jFOI/AAAAAAAABdk/l1oUkwFItvM/s1600/happy-samoyed-dog-wallpaper.jpg">Link to Picture</a> <br>'
+       self._lifespan = 'Life Expectancy: 10-13 years <br>'
        self._habitat = 'Habitat: Wide Variety <br>'
        self._geolocation = 'Geolocation: Found All Over The World <br>'
 
@@ -65,15 +65,15 @@ class Dog(Animal):
 class Cat(Animal):
     def __init__(self):
        super(Animal, self).__init__()
-       self._phylum = 'Phylum: yo <br>'
-       self._class = 'Class: animal <br>'
-       self._order = 'Order: order <br>'
-       self._family = 'Family: dog <br>'
-       self._genus = 'Genus: hello <br>'
-       self._url = 'Picture: <a href= "www.pic.com">Link to Picture</a> <br>'
-       self._lifespan = 'Life Expectancy: 16 years <br>'
-       self._habitat = 'Habitat: grass <br>'
-       self._geolocation = 'Geolocation: everywhere <br>'
+       self._phylum = 'Phylum: Chordata <br>'
+       self._class = 'Class: Mammalia <br>'
+       self._order = 'Order: Carnivora <br>'
+       self._family = 'Family: Felidea <br>'
+       self._genus = 'Genus: Felis <br>'
+       self._url = 'Picture: <a href= "http://petapixel.com/assets/uploads/2014/03/cat.jpg">Link to Picture</a> <br>'
+       self._lifespan = 'Life Expectancy: 12-14 years <br>'
+       self._habitat = 'Habitat: Wide Variety <br>'
+       self._geolocation = 'Geolocation: Found All Over The World <br>'
        
     def sound(self):
         self._sound = 'Sound: Meow'
