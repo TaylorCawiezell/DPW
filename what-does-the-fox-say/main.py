@@ -64,17 +64,17 @@ class Dog(Animal):
 class Cat(Animal):
     def __init__(self):
        super(Animal, self).__init__()
-       self._phylum = 'yo'
-       self._class = 'animal'
-       self._family = 'cat'
-       self._genus = 'hello'
-       self._url = 'www.pic.com'
-       self._lifespan = '16' + ' years'
-       self._habitat = 'grass'
-       self._geolocation = 'everywhere'
+       self._phylum = 'Phylum: yo <br>'
+       self._class = 'Class: animal <br>'
+       self._family = 'Family: dog <br>'
+       self._genus = 'Genus: hello <br>'
+       self._url = 'Picture: <a href= "www.pic.com">Link to Picture</a> <br>'
+       self._lifespan = 'Life Expectancy: 16 years <br>'
+       self._habitat = 'Habitat: grass <br>'
+       self._geolocation = 'Geolocation: everywhere <br>'
        
     def sound(self):
-        self._sound = 'Meow'
+        self._sound = 'Sound: Meow'
         return self._sound
     
     def p(self):
