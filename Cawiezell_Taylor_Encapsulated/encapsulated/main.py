@@ -15,7 +15,7 @@ class MainHandler(webapp2.RequestHandler):
         page_body = '''
             <div class='area'>
             <h1>Employee Earnings</h1>
-            <button id="bob">Bob Jones</button>
+            <button id="bobbut">Bob Jones</button>
             <button>Tom Frank</button>
             <button>James Fail</button>
             <button>Sarah Lewis</button>
@@ -102,7 +102,6 @@ class Earnings(object):
             
     def calc_total(self):
       self.__total_earnings = self.anual * self.time
-      
       
     
 
