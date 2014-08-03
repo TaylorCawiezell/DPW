@@ -30,7 +30,7 @@ class MovieView(object):
         self.__movie = '<br>'
     #suppose to update the movie variable
     def update(self):
-        self.__movie += mi.title + '<br>' + '<img src="' +mi.poster+'" />' + '<br> release year: ' + str(mi.year) + '<br> critic rating ' +  str(mi.rating) + '<br> length ' + str(mi.runtime)  + ' minutes '  + '<br>' + mi.synopsis
+        self.__movie += mi.title + '<br>' + '<img src="' + mi.poster+'" />' + '<br> release year: ' + str(mi.year) + '<br> critic rating ' +  str(mi.rating) + '<br> length ' + str(mi.runtime)  + ' minutes '  + '<br>' + mi.synopsis
     #propperty for movie variable      
     @property
     def movie(self):
@@ -78,7 +78,7 @@ class MovieModel(object):
         mi.runtime = jsondoc['movies'][0]['runtime']
         print mi.poster
         # displaying the json information correctly
-        return  mi.title + '<br>' + '<img src="' +mi.poster+'" />' + '<br> release year: ' + str(mi.year) + '<br> critic rating ' +  str(mi.rating) + '<br> length ' + str(mi.runtime)  + ' minutes '  + '<br>' + mi.synopsis
+        return  mi.title + '<br>' + '<img src="' +mi.poster+'" />' + '<br> Release Year: ' + str(mi.year) + '<br> Critic Rating: ' +  str(mi.rating) + '<br> Length: ' + str(mi.runtime)  + ' minutes '  + '<br><br>' + mi.synopsis
             
         
     
@@ -104,7 +104,8 @@ class Page():
     </head>
     <body>
         <header>
-            <h1>Just type a Movie into the Search bar!</h1>
+             <h1 class='title'>Film Found</h1>
+            <h1>Just type a Movie into the Search bar!</h1 class='movie'>
         </header>'''
         self._search = '<form method=GET><input type="text" name="search" spellcheck="true" required /><input type="submit" value="go" /></form><h1>'
         self._body = ''

@@ -57,7 +57,7 @@ class Page(object): #borrowing from object class
     <head>
         <title></title>
     </head>
-    <body>'''
+    <body>''''
         
         self._body = 'Filler'
         self._close = '''

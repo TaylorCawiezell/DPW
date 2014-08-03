@@ -1,6 +1,11 @@
 /* editing text for body tag */
 body{
+	color:white;
 	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+	background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
 }
 
 input[type='text']{
@@ -9,4 +14,11 @@ input[type='text']{
 	font: 50px 'Raleway', sans-serif;
 }
 
+.title{
+	font-size: 50px;
+}
+
+.movie{
+	
+}
 
