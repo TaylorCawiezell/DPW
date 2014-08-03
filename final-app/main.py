@@ -31,7 +31,19 @@ class MovieModel(object):
         result = opener.open(request)
            
     
+        #parsing JSON
+        jsondoc = json.load(result)
         
+        mi = MovieInformation()
+        mi.poster = jsondoc['movies'][0]['posters']['thumbnail']
+        mi.year = jsondoc['movies'][0]['year']
+        mi.title = jsondoc['movies'][0]['title']
+        mi.rating = jsondoc['movies'][0]['ratings']['critics_score']
+        mi.synopsis = jsondoc['movies'][0]['synopsis']
+        mi.runtime = jsondoc['movies'][0]['runtime']
+        
+        return  mi.title + '<br>' + '<img src="' +mi.poster+'" />' + '<br> release year: ' + str(mi.year) + '<br> critic rating ' +  str(mi.rating) + '<br> length ' + str(mi.runtime)  + ' minutes '  + '<br>' + mi.synopsis
+            
         
     
     @property
