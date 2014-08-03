@@ -103,14 +103,17 @@ class Page():
         <link rel="stylesheet" type="text/css" href="css/main.css" />
     </head>
     <body>
+        <div class='content'>
         <header>
-             <h1 class='title'>Film Found</h1>
-            <h1>Just type a Movie into the Search bar!</h1 class='movie'>
+            <h1 class='title'>Film Found!</h1><img src='css/icon.png' />
+            <h1>Just type a Movie into the Search bar!<h1 class='movie'>
         </header>'''
         self._search = '<form method=GET><input type="text" name="search" spellcheck="true" required /><input type="submit" value="go" /></form><h1>'
         self._body = ''
         self._close = '''
-    </h1></body>
+        </h1>
+        </div>
+    </body>
 </html>'''
     
         print self._body
