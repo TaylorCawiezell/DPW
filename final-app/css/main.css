@@ -1,0 +1,12 @@
+/* editing text for body tag */
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+input[type='text']{
+	width:500px;
+	height:60px;
+	font: 50px 'Raleway', sans-serif;
+}
+
+

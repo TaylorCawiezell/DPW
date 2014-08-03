@@ -10,11 +10,11 @@ import webapp2
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         # if Statement to select wich print out happens based off url
-        if self.request.url == 'http://localhost:17080/?dog=':
+        if self.request.GET['key'] == 'dog':
             self.response.write(Page().dp())
-        elif self.request.url == 'http://localhost:17080/?cat=':
+        elif self.request.GET['key'] == 'cat':
             self.response.write(Page().cp())
-        elif self.request.url == 'http://localhost:17080/?fox=':
+        elif self.request.GET['key'] == 'fox':
             self.response.write(Page().fp())
         else:
              self.response.write(Page().p())
@@ -46,11 +46,10 @@ class Page(object):
         
         self._body = '''</h1>
         <h1>
-        <form style="display: inline" method="get">
-            <button name='dog'>Dog</button>
-            <button name='cat'>Cat</button>
-            <button name='fox'>Fox</button>
-        </form><br>
+            <a href='?key=dog'>Dog</a>
+            <a href='?key=dog'>Dog</a>
+            <a href='?key=dog'>Dog</a>
+        <br>
         ''' 
         
         self._close = '''</h1>
