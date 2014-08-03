@@ -11,7 +11,26 @@ class MainHandler(webapp2.RequestHandler):
             
         self.response.write(page.print_out())
 
-
+class MovieView(object):
+    '''This class handle how the weather is shown'''
+    def __init__(self):
+        self.__movie = '<br>'
+    
+    def update(self):
+        self.__movie += mi.title + '<br>' + '<img src="' +mi.poster+'" />' + '<br> release year: ' + str(mi.year) + '<br> critic rating ' +  str(mi.rating) + '<br> length ' + str(mi.runtime)  + ' minutes '  + '<br>' + mi.synopsis
+            
+    @property
+    def movie(self):
+        return self.__movie
+         
+    @property
+    def movie(self):
+        pass
+    
+    @movie.setter
+    def movie(self):
+        self.update()
+        
 class MovieModel(object):
     def __init__(self):
         self.__url = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=amgmm7669zxyxdf64mkk6pj2&q='
@@ -41,6 +60,7 @@ class MovieModel(object):
         mi.rating = jsondoc['movies'][0]['ratings']['critics_score']
         mi.synopsis = jsondoc['movies'][0]['synopsis']
         mi.runtime = jsondoc['movies'][0]['runtime']
+        print mi.poster
         
         return  mi.title + '<br>' + '<img src="' +mi.poster+'" />' + '<br> release year: ' + str(mi.year) + '<br> critic rating ' +  str(mi.rating) + '<br> length ' + str(mi.runtime)  + ' minutes '  + '<br>' + mi.synopsis
             
