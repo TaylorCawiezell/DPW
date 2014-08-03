@@ -6,19 +6,21 @@ import json
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        #variable for test page
         page = Page()
+        #if statement for requesting information
         if self.request.GET:
             #get info from api
             mm = MovieModel()# creates model
-            mm.search = self.request.GET['search']
-            mm.search = self.request.GET['search'].replace(" ","+")
-            #searchcode = search
+            mm.search = self.request.GET['search']#gets search input for users quiery
+            mm.search = self.request.GET['search'].replace(" ","+")#replaces spaces with plus to make searches work 
             mm.callApi()#tells it to connect to api
             mv = MovieView()#creates view
-            #takes data objects from MOdel and gives view
-            #page._body = mv.movie
-            page._body = mm.callApi()
             
+            #takes data objects from Model and gives view
+            #page._body = mv.movie # not working coming up as none type
+            page._body = mm.callApi()
+         #printing html information   
         self.response.write(page.print_out())
 
 class MovieView(object):
