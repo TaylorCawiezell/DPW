@@ -21,7 +21,17 @@ class MovieModel(object):
         #open the URL
         #parse
     
+    #requests and loads information from api
+    def callApi(self):
+        #assemble request
+        request = urllib2.Request(self.__url+self.__search+'&page_limit=5')
+        #use the urllib2 to create an object to get the url
+        opener = urllib2.build_opener()
+        # use the url to get a result - request info from the API
+        result = opener.open(request)
+           
     
+        
         
     
     @property
