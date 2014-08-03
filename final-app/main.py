@@ -6,7 +6,32 @@ import json
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-       
+        page = Page()
+        
+            
+        self.response.write(page.print_out())
+
+
+class MovieModel(object):
+    def __init__(self):
+        self.__url = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=amgmm7669zxyxdf64mkk6pj2&q='
+        self.__search = ''
+        self.json = ''
+        #contact API
+        #open the URL
+        #parse
+    
+    
+        
+    
+    @property
+    def search(self):
+        pass
+    
+    @search.setter
+    def search(self, s):
+        self.__search = s
+        
 class Page():
     def __init__(self):
         self._head = '''
