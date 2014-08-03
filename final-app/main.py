@@ -8,7 +8,7 @@ import webapp2
 import urllib2 #python classes and code needed to open url information
 import json
 
-''' For this project I created a search engine for movies using rotten tomatoes API'''
+''' For this project I created a search engine for movies using rotten tomatoes API, I have provided the api key I us'''
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         #variable for test page
