@@ -7,7 +7,17 @@ import json
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         page = Page()
-        
+        if self.request.GET:
+            #get info from api
+            mm = MovieModel()# creates model
+            mm.search = self.request.GET['search']
+            mm.search = self.request.GET['search'].replace(" ","+")
+            #searchcode = search
+            mm.callApi()#tells it to connect to api
+            mv = MovieView()#creates view
+            #takes data objects from MOdel and gives view
+            #page._body = mv.movie
+            page._body = mm.callApi()
             
         self.response.write(page.print_out())
 
