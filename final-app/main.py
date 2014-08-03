@@ -120,7 +120,8 @@ class Page():
     
     def print_out(self):
         return self._head + self._search + self._body + self._close
-    
+
+#setting up variables to be used for json
 class MovieInformation(object):
     def __init__(self):
         self.title = ''
