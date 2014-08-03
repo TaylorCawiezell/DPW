@@ -116,8 +116,8 @@ class Page():
     </body>
 </html>'''
     
-        print self._body
-    
+        
+    #function for printing out html information 
     def print_out(self):
         return self._head + self._search + self._body + self._close
 
