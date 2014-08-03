@@ -8,7 +8,7 @@ body{
 	width:70%;
 }
 
-
+/* inpout styling for text*/
 input[type='text']{
 	width:500px;
 	height:60px;
@@ -22,7 +22,7 @@ input[type='text']{
 	-moz-box-shadow: -3px 6px 53px 0px rgba(0,0,0,0.75);
 	box-shadow: -3px 6px 53px 0px rgba(0,0,0,0.75);
 }
-
+/* inpout styling for button*/
 input[type='submit']{
 	border:none;
 	position:relative;
@@ -40,15 +40,15 @@ input[type='submit']{
 	-moz-box-shadow: -3px 6px 53px 0px rgba(0,0,0,0.75);
 	box-shadow: -3px 6px 53px 0px rgba(0,0,0,0.75);
 }
-
+/* making title bigger*/
 .title{
 	font-size: 50px;
 }
-
+/* adding line border between search bar*/
 .movie{
 	border: 2px solid white;
 }
-
+/* formating for content*/
 .content{
 	border-radius:20px;
 	padding:20px;
