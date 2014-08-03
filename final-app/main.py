@@ -24,28 +24,32 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(page.print_out())
 
 class MovieView(object):
-    '''This class handle how the weather is shown'''
+    '''This class handle how the movie object should be shown however its not working
+       No matter what I put as the update method I'm getting the same results'''
     def __init__(self):
         self.__movie = '<br>'
-    
+    #suppose to update the movie variable
     def update(self):
         self.__movie += mi.title + '<br>' + '<img src="' +mi.poster+'" />' + '<br> release year: ' + str(mi.year) + '<br> critic rating ' +  str(mi.rating) + '<br> length ' + str(mi.runtime)  + ' minutes '  + '<br>' + mi.synopsis
-            
+    #propperty for movie variable      
     @property
     def movie(self):
         return self.__movie
-         
+    #passing on getter    
     @property
-    def movie(self):
+    def movieup(self):
         pass
-    
+    #setter for movie tried multipe ways of changing with no result 
     @movie.setter
-    def movie(self):
+    def movieup(self):
         self.update()
         
 class MovieModel(object):
+    ''' this is the model for the movie wich gets data from json and puts it into variables'''
     def __init__(self):
+        #url variables with API key
         self.__url = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=amgmm7669zxyxdf64mkk6pj2&q='
+        #search variable for eventual user input
         self.__search = ''
         self.json = ''
         #contact API
