@@ -57,9 +57,7 @@ class MovieModel(object):
         #search variable for eventual user input
         self.__search = ''
         self.json = ''
-        #contact API
-        #open the URL
-        #parse
+        
     
     #requests and loads information from api
     def callApi(self):
@@ -75,12 +73,12 @@ class MovieModel(object):
         jsondoc = json.load(result)
         #variables for json information
         mi = MovieInformation()
-        mi.poster = jsondoc['movies'][0]['posters']['thumbnail']
-        mi.year = jsondoc['movies'][0]['year']
-        mi.title = jsondoc['movies'][0]['title']
-        mi.rating = jsondoc['movies'][0]['ratings']['critics_score']
-        mi.synopsis = jsondoc['movies'][0]['synopsis']
-        mi.runtime = jsondoc['movies'][0]['runtime']
+        mi.poster = jsondoc['movies'][0]['posters']['thumbnail']#movie poster picture
+        mi.year = jsondoc['movies'][0]['year']#movie year
+        mi.title = jsondoc['movies'][0]['title']#movie title
+        mi.rating = jsondoc['movies'][0]['ratings']['critics_score']#movie rotten tomatoes rating
+        mi.synopsis = jsondoc['movies'][0]['synopsis']#movie synopsis
+        mi.runtime = jsondoc['movies'][0]['runtime']#movie length
         print mi.poster
         # displaying the json information correctly
         return  mi.title + '<br>' + '<img src="' +mi.poster+'" />' + '<br> Release Year: ' + str(mi.year) + '<br> Critic Rating: ' +  str(mi.rating) + '<br> Length: ' + str(mi.runtime)  + ' minutes '  + '<br><br>' + mi.synopsis
