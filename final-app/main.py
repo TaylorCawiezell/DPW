@@ -68,7 +68,7 @@ class MovieModel(object):
     
         #parsing JSON
         jsondoc = json.load(result)
-        
+        #variables for json information
         mi = MovieInformation()
         mi.poster = jsondoc['movies'][0]['posters']['thumbnail']
         mi.year = jsondoc['movies'][0]['year']
@@ -77,7 +77,7 @@ class MovieModel(object):
         mi.synopsis = jsondoc['movies'][0]['synopsis']
         mi.runtime = jsondoc['movies'][0]['runtime']
         print mi.poster
-        
+        # displaying the json information correctly
         return  mi.title + '<br>' + '<img src="' +mi.poster+'" />' + '<br> release year: ' + str(mi.year) + '<br> critic rating ' +  str(mi.rating) + '<br> length ' + str(mi.runtime)  + ' minutes '  + '<br>' + mi.synopsis
             
         
@@ -85,12 +85,13 @@ class MovieModel(object):
     @property
     def search(self):
         pass
-    
+    #to sett search variable to polymorph
     @search.setter
     def search(self, s):
         self.__search = s
         
 class Page():
+    #class for creating web page layout
     def __init__(self):
         self._head = '''
 <!DOCTYPE HTML>
@@ -105,10 +106,10 @@ class Page():
         <header>
             <h1>Just type a Movie into the Search bar!</h1>
         </header>'''
-        self._search = '<form method=GET><input type="text" name="search" spellcheck="true" required /><input type="submit" value="go" /></form>'
-        self._body = MovieInformation().rating
+        self._search = '<form method=GET><input type="text" name="search" spellcheck="true" required /><input type="submit" value="go" /></form><h1>'
+        self._body = ''
         self._close = '''
-    </body>
+    </h1></body>
 </html>'''
     
         print self._body
