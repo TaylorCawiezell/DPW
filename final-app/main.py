@@ -33,6 +33,18 @@ class Page():
     def print_out(self):
         return self._head + self._search + self._body + self._close
     
+class MovieInformation(object):
+    def __init__(self):
+        self.title = ''
+        self.runtime = ''
+        self.rating = ''
+        self.review = ''
+        self.year = ''
+        self.synopsis = ''
+        self.poster = ''
+        
+    
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
