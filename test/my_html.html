@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Christian Insight</title>
+		<meta name="description" content="">
+		<meta name="author" content="Taylor Cawiezell">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+        
+        <!--Place CSS Here!-->
+        <link href='http://fonts.googleapis.com/css?family=Nixie+One|Josefin+Sans:300,400|Raleway:400,200' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.css">
+	</head>
+    <!-- custom CSS styles-->
+    <style>
+    /*  -----FONTS-------
+        font-family: 'Nixie One', cursive;
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Raleway', sans-serif;
+    */
+        
+        
+        *{
+
+        }
+        
+        .one{
+        
+        }
+        
+        .two{
+           
+        }
+        
+        .three{
+            text-align: center;
+            background:#379ee1;
+            color: white;
+        }
+        
+        .three img{
+        }
+        
+        .one h3{
+            color: #595859;
+            font:3vw "Lucida Sans Unicode";   
+        }
+        
+        .one h4{
+            color: #595859;
+            font:2vw "Lucida Sans Unicode";   
+        }
+        
+        .one h5{
+            color: #595859;
+            font:4vw 'Nixie One', cursive;   
+        }
+        
+        .buttons{
+            text-align: center;
+        }
+       
+        .button1,.button2,.button3{
+            background: #379ee1;
+            font:3.5vm "Lucida Sans Unicode";
+            width:30%;
+        }
+        
+        .two .p{
+            font-family:  "Lucida Sans Unicode";
+            font-size: 2.5vm;
+            color:#595859;
+        }
+        
+        .two h3{
+            text-align: center;
+            font-family:  "Lucida Sans Unicode";
+            font-size: 2.5vm;
+            color:#595859;
+        }
+        
+        
+        
+    </style>
+    
+	<body>
+        <section class="three row">
+                <article class="small-12 large-12 columns"><img src="./logo.png"/></article>
+            </section>
+            <section class="row">
+        
+        <main id='one'>
+                <article class="one small-6 large-7 columns">
+                    <h5>10 Best Practices for Managing the Stress of Ministry </h5>
+                    <h3>Save Over 79%!</h3>
+                    <h4>Oppurtunity ends Friday, September 12th!</h4>
+                </article>
+                <article class="two small-6 large-5 columns"><img src="http://www.churchleaderinsights.com/images/Stress-Management-CLI-web-icon1.jpg" /></article>
+            </section>
+        </main>
+        
+        <main id='two'>
+            <section class="row">
+                <article class="one small-6 large-7 columns">
+                    <h4>Pick up this BRAND NEW resource, The Stress Management Seminar, AND over $218.00 in Bonuses for only $99 (regularly $299.95!) PLUS Receive TWO FREE MONTHS of The Renegade Pastors Network (additional $1,011.20 value!)
+That’s a total retail value of $1,529.15! Yours for only $99!</h4>
+                </article>
+                <article class="two small-6 large-5 columns"><img src="http://www.churchleaderinsights.com/images/Stress-Management-CLI-web-icon1.jpg" /></article>
+            </section>
+        </main>
+        
+        <main id='three'>
+            <section class="row">
+                <article class="two small-12 large-12 columns">
+                    <h3>All of This is Included With Your Purchase</h3>
+                </article>
+            </section>
+            <section class="row">
+                <article class="two small-3 large-3 columns"><img src='http://churchleaderinsights.com/images/Stress-Management-collage-icon-CDs.png'/>
+                    <br/>
+                    <h3 class='p'>Almost Three Hours of Training</h3>
+                </article>
+                <article class="two small-3 large-3 columns"><img src='http://churchleaderinsights.com/images/Stress-Management-collage-icon-transcript.jpg'/>
+                    <br/>
+                    <h3 class='p'>Complete Transcript</h3>
+                </article>
+                <article class="two small-3 large-3 columns"><img src='http://churchleaderinsights.com/images/Stress-Management-collage-icon-notes.jpg'/>
+                    <br/>
+                    <h3 class='p'>Student Guide</h3>
+                </article>
+                <article class="two small-3 large-3 columns"><img src='http://churchleaderinsights.com/images/Stress-Management-collage-icon-notes.jpg'/>
+                    <br/>
+                    <h3 class='p'>A Complete Leader’s Guide</h3>
+                </article>
+            </section>
+        </main>
+        
+        <section class='buttons row'>
+            <article class="small-12 large-12 columns">
+                <button class='button1'>Stress</button>
+                <button class='button2'>Price</button>
+                <button class='button3'>Content</button>
+            </article>
+        </section>
+	
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+
+(function(){
+    
+     $('#two').hide();
+     $('#three').hide();
+    
+    $('.button1').click(function(){
+        $('button').removeClass("nav-active");
+        $(this).addClass("nav-active");
+        $('#two').hide();
+        $('#three').hide();
+        $('#one').show();
+    });
+    
+    
+     $('.button2').click(function(){
+        $('button').removeClass("nav-active");
+        $(this).addClass("nav-active");
+        $('#one').hide();
+        $('#three').hide();
+        $('#two').show();
+    });
+    
+    $('.button3').click(function(){
+        $('button').removeClass("nav-active");
+        $(this).addClass("nav-active");
+        $('#one').hide();
+        $('#two').hide();
+        $('#three').show();
+    });
+    
+   
+ }());           
+        
+</script>
+    
+    </body>
+</html>
